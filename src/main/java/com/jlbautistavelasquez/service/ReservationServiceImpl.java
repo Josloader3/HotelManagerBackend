@@ -22,4 +22,9 @@ public class ReservationServiceImpl implements IReservationService{
     public List<Reservation> findAll() throws Exception {
         return repo.findAll();
     }
+
+    @Override
+    public Reservation findById(Integer id) throws Exception {
+        return repo.findById(id).orElse(new Reservation());
+    }
 }

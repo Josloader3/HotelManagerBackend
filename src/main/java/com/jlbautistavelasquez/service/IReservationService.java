@@ -7,4 +7,5 @@ import java.util.List;
 public interface IReservationService {
     Reservation save(Reservation reservation) throws Exception;
     List<Reservation> findAll() throws Exception;
+    Reservation findById(Integer id) throws Exception;
 }
